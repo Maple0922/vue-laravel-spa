@@ -29,7 +29,7 @@
                 task: {}
             }
         },
-        method: {
+        methods: {
             submit(){
                 axios.post('/api/tasks', this.task)
                 .then((res) => {

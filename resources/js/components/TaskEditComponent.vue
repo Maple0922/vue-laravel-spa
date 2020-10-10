@@ -32,7 +32,7 @@
 <script>
     export default {
         props: {
-            taskId: String
+            taskId: Number
         },
         data: function(){
             return {
@@ -49,7 +49,7 @@
             submit(){
                 axios.put('/api/tasks/' + this.taskId, this.task)
                 .then((res) => {
-                    this.$router.push({name: task.list});
+                    this.$router.push({name: 'task.list'});
                 });
             }
         },
