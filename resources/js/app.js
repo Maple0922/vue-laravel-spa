@@ -14,6 +14,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+console.log(Vue)
+
 Vue.use(VueRouter);
 
 const router = new VueRouter({

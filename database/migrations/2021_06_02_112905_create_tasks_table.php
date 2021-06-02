@@ -6,27 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTasksTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title', 100);
-            $table->string('content', 100);
-            $table->string('person_in_charge', 100);
+            $table->id();
+            $table->string('title');
+            $table->text('content');
+            $table->boolean('is_done');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('tasks');

@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+    public function __construct(Task $task)
+    {
+        $this->task = $task;
+    }
+
     public function index()
     {
-        return Task::all();
+        return $this->task->all();
     }
 
     public function store(Request $request)
     {
-        return Task::create($request->all());
+        return $this->task->create($request->all());
     }
 
     public function show(Task $task)
