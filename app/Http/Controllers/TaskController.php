@@ -14,6 +14,9 @@ class TaskController extends Controller
 
     public function index()
     {
+        // Modelのメソッドを呼び出す 有効
+        return $this->task->get_tasks();
+
         // where系 有効
         return $this->task->whereNotNull('id')->get();
         return $this->task->where('id', 4)->get();
@@ -24,12 +27,18 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
+        // Modelのメソッドを呼び出す 有効
+        return $this->task->save_task($request);
+
         // create 有効
         return $this->task->create($request->all());
     }
 
     public function show(Task $task)
     {
+        // Modelのメソッドを呼び出す 有効
+        return $this->task->get_task($task->id);
+
         // メソッドインジェクション 有効
         return $task;
 
@@ -39,9 +48,12 @@ class TaskController extends Controller
 
     public function update(Request $request, Task $task)
     {
+
+        // Modelのメソッドを呼び出す 有効
+        return $this->task->update_task($task->id, $request);
+
         // メソッドインジェクション 有効
-        $task->update($request->all());
-        return $task;
+        return $task->update($request->all());
 
         // fill 有効
         $task = $this->task->find($request->id);
@@ -51,9 +63,11 @@ class TaskController extends Controller
 
     public function destroy(Task $task)
     {
+        // Modelのメソッドを呼び出す 有効
+        return $this->task->delete_task($task->id);
+
         // メソッドインジェクション 有効
-        $task->delete();
-        return $task;
+        return $task->delete();
 
         // delete 有効
         $this->task->find($task->id)->delete();
