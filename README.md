@@ -1,7 +1,9 @@
 ## 環境構築
 
+create DB 'vue-laravel-spa' on mysql
 ```
 git clone https://github.com/Maple0922/vue-laravel-spa.git
+cd vue-laravel-spa
 composer install
 npm install
 npm run dev
