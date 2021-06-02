@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class TaskController extends Controller
 {
@@ -19,6 +20,7 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
+        // return Task::create($request->all());
         return $this->task->create($request->all());
     }
 

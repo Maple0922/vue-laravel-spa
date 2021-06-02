@@ -27,13 +27,13 @@
                     </div>
                     <div class="form-group row">
                         <label for="is_done" class="col-sm-3 col-form-label"
-                            >Person In Charge</label
+                            >Is Done</label
                         >
                         <input
-                            type="text"
-                            class="col-sm-9 form-control"
+                            type="checkbox"
+                            class="col-sm-9"
                             id="is_done"
-                            v-model="task.person_in_charge"
+                            v-model="task.is_done"
                         />
                     </div>
                     <button type="submit" class="btn btn-primary">

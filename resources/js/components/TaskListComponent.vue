@@ -17,7 +17,13 @@
                     <th scope="row">{{ task.id }}</th>
                     <td>{{ task.title }}</td>
                     <td>{{ task.content }}</td>
-                    <td>{{ task.is_done }}</td>
+                    <td>
+                        <input
+                            type="checkbox"
+                            :checked="task.is_done"
+                            onclick="return false;"
+                        />
+                    </td>
                     <td>
                         <router-link
                             v-bind:to="{

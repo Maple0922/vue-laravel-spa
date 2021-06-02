@@ -42,8 +42,8 @@
                             >Is Done</label
                         >
                         <input
-                            type="text"
-                            class="col-sm-9 form-control"
+                            type="checkbox"
+                            class="col-sm-9"
                             id="is_done"
                             v-model="task.is_done"
                         />

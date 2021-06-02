@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+    protected $fillable = [
+        'title',
+        'content',
+        'is_done'
+    ];
+
     use HasFactory;
 }

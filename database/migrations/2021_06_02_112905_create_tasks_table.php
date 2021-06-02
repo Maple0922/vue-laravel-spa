@@ -12,7 +12,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->boolean('is_done');
+            $table->boolean('is_done')->default(false);
             $table->timestamps();
         });
     }

@@ -40,16 +40,14 @@
                         />
                     </div>
                     <div class="form-group row border-bottom">
-                        <label
-                            for="person-in-charge"
-                            class="col-sm-3 col-form-label"
+                        <label for="is_done" class="col-sm-3 col-form-label"
                             >Is Done</label
                         >
                         <input
                             type="checkbox"
-                            class="col-sm-9 form-control-plaintext"
-                            readonly
-                            id="person-in-charge"
+                            class="col-sm-9"
+                            id="is_done"
+                            onclick="return false;"
                             v-model="task.is_done"
                         />
                     </div>
