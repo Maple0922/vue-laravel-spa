@@ -1,3 +1,19 @@
+## 環境構築
+
+create DB 'vue-laravel-spa' on mysql
+```
+git clone https://github.com/Maple0922/vue-laravel-spa.git
+cd vue-laravel-spa
+composer install
+npm install
+npm run dev
+cp .env.example .env
+php artisan migrate --seed
+php artisan key:generate
+php artisan serve
+```
+http://localhost:8000
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
