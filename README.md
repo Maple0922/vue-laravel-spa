@@ -7,9 +7,9 @@ cd vue-laravel-spa
 composer install
 npm install
 npm run dev
-php artisan key:generate
 cp .env.example .env
 php artisan migrate --seed
+php artisan key:generate
 php artisan serve
 ```
 http://localhost:8000
